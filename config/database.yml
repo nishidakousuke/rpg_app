@@ -48,7 +48,8 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
+#半角スペース２個分の空白を開ける
   <<: *default
-  database: rpg_app_production
-  username: rpg_app
-  password: <%= ENV['RPG_APP_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
