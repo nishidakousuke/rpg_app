@@ -1,0 +1,47 @@
+.battle_hero_box {
+  border: solid 1px #000;
+  width: 100px;
+  margin-bottom: 20px;
+  &_name {
+    border-bottom: solid 1px #000;
+  }
+}
+
+.battle_monster_box {
+  border: solid 1px #000;
+  width: 300px;
+  margin: 0 auto;
+  .battle_monster_name {
+    border-bottom: solid 1px #000;
+    &_text {
+      text-align: center;
+    }
+  }
+  .battle_monster_image {
+    border-bottom: solid 1px #000;
+    &_text {
+      text-align: center;
+    }
+  }
+  .battle_monster_hp {
+    &_text {
+      text-align: center;
+    }
+  }
+}
+
+.battle_footer {
+  height: 170px;
+  margin: 80px 5px 0 5px;
+  border: solid 1px #000;
+}
+
+#battle_hero_box {
+  display: none;
+}
+
+#back_field {
+  text-decoration: none;
+  color: #000;
+  display: none;
+}

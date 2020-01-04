@@ -1,0 +1,16 @@
+%h1.hero_create
+  勇者の名前を決めよう
+%p.hero_name_create_instructions
+  名前を入力してください
+= form_for @hero, :url => {:controller => :heroes, :action => :create}  do |f|
+  .hero_name_text_field
+    = f.text_field :name, id: "hero_name_define", class: "hero_name_define"
+    = f.hidden_field :hp, value: 100
+    = f.hidden_field :mp, value: 100
+    = f.hidden_field :attack, value: 100
+    = f.hidden_field :defence, value: 100
+    = f.hidden_field :magic_attack, value: 100
+    = f.hidden_field :magic_defence, value: 100
+    = f.hidden_field :speed, value: 100
+  .hero_name_submit_box
+    = f.submit "名前を決定する", id: "hero_name_define_submit", class: "hero_name_define_submit"

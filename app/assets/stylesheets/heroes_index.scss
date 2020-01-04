@@ -1,0 +1,13 @@
+.first_time_rpg {
+  text-align: center;
+  font-size: 3em;
+}
+
+.game_start {
+  text-align: center;
+  font-size: 1.5em;
+  &_link {
+    text-decoration: none;
+    color: blue;
+  }
+}

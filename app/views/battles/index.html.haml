@@ -1,0 +1,35 @@
+- monster = @monsters.sample #モンスターを一匹呼び出す
+.battle_hero_box
+  .battle_hero_box_name
+    %p.battle_hero_box_name_text#battle_hero_box_name_text
+      = @hero.name
+  .battle_hero_box_status
+    %p.battle_hero_box_status_hp#battle_hero_box_status_hp
+      = "H #{@hero.hp}"
+    %p.battle_hero_box_status_mp
+      = "M #{@hero.mp}"
+
+.battle_monster_box
+  .battle_monster_name
+    %p.battle_monster_name_text#battle_monster_name_text
+      = monster.name
+  .battle_monster_image
+    = image_tag "slime.png", size: "300x180" if monster.name == "スライム"
+    = image_tag "goblin.jpg", size: "300x180" if monster.name == "ゴブリン"
+    = image_tag "matango.jpeg", size: "300x180" if monster.name == "マタンゴ"
+  .battle_monster_hp
+    %p.battle_monster_hp_text#battle_monster_hp_text
+      = "H #{monster.hp}"
+
+%footer.battle_footer#battle_footer
+  .battle_hero_box#battle_hero_box
+    .battle_hero_box_name
+      %p.battle_hero_box_name_text
+        = @hero.name
+    .battle_hero_box_status
+      %p#combat
+        たたかう
+      %p#escape
+        逃げる
+= link_to "フィールドに戻る", firststages_path, id: "back_field"
+
