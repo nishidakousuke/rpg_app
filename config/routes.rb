@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'firststages#index'
+  root 'heroes#index'
   resources :heroes
   resources :battles
   resources :firststages
