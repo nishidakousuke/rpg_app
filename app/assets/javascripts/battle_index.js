@@ -67,14 +67,22 @@ $(document).on('turbolinks:load', function() {
 
   // モンスターを倒した後の関数
   function monsterDefect(p1) {
-    setTimeout(function() {
-      fotter.removeChild(p1);
-      let p3 = document.createElement("p");
-      p3.innerHTML = `${monster_name.textContent}を倒した！`;
-      fotter.appendChild(p3);
-      let back_field = document.getElementById("back_field");
-      back_field.style.display = "block";
-    }, 3000);
+    let promise = new Promise(function(resolve, reject) {
+      setTimeout(function() {
+        fotter.removeChild(p1);
+        let p3 = document.createElement("p");
+        p3.innerHTML = `${monster_name.textContent}を倒した！`;
+        fotter.appendChild(p3);
+        resolve();
+      }, 3000);
+    });
+    promise.then(function() {
+      setTimeout(function() {
+        let back_field = document.getElementById("back_field");
+        let href = back_field.href;
+        location.href = href;
+      }, 3000);
+    });
   }
 
   // たたかうをクリックすると発火
