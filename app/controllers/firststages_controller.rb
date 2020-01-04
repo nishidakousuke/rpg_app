@@ -1,0 +1,2 @@
+class FirststagesController < ApplicationController
+end

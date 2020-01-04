@@ -1,0 +1,2 @@
+module FirststagesHelper
+end
