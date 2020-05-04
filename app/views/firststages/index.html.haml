@@ -1,1 +1,6 @@
-= link_to "戦闘開始", battles_path
+.first_stage
+  .first_stage_monsterArea
+  .first_stage_hero#first_stage_hero
+    = @hero.name[0]
+
+= link_to "戦闘開始", battles_path, id: "battles_path"

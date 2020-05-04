@@ -9,7 +9,7 @@
     %p.battle_hero_box_status_mp
       = "M #{@hero.mp}"
 
-.battle_monster_box
+%div{class: "battle_monster_box", id: "battle_monster_box", data: {attack: monster.normal_attack, defence: monster.defence}}
   .battle_monster_name
     %p.battle_monster_name_text#battle_monster_name_text
       = monster.name
@@ -27,7 +27,7 @@
       %p.battle_hero_box_name_text
         = @hero.name
     .battle_hero_box_status
-      %p#combat
+      %p{id: "combat", data: {attack: @hero.attack, defence: @hero.defence}}
         たたかう
       %p#escape
         逃げる

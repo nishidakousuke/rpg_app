@@ -1,0 +1,2 @@
+class Goblin < Monster
+end

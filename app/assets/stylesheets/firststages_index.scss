@@ -1,0 +1,18 @@
+.first_stage {
+  background-image: image-url("first_stage.jpg");
+  background-size: contain;
+  width: 700px;
+  height: 500px;
+  border: solid 1px #000;
+  position: relative;
+  &_monsterArea {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    position: absolute;
+    left: 150px;
+  }
+  &_hero {
+    position: absolute;
+  }
+}

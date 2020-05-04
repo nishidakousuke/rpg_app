@@ -1,0 +1,2 @@
+class Slime < Monster
+end
